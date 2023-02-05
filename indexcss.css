@@ -1,0 +1,11 @@
+img {
+    width: 300px;
+    border-radius: 100px;
+    float: left;
+    margin-right: 100px;
+    object-fit: cover;
+  }
+
+  .username {
+    font-weight: bold;
+  }
