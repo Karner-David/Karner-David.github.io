@@ -28,21 +28,6 @@ img {
     position: relative;
   }
 
-  /* .top_nav {
-    width: 25%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .top_nav u li {
-    list-style: none;
-    display: incline-block;
-    margin: 0 20px;
-  }
-  */
   .top_nav ul li a {
     text-decoration: none;
     color: rgb(88, 149, 114);
@@ -121,28 +106,3 @@ img {
   button:hover {
     border: rgb(100, 149, 237);
   }
-
-  /*
-  .top_nav a {
-    list-style-type: none;
-    display: inline-block;
-    margin: 0 20px;
-    float: left;
-    color: crimson;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    border-style: double;
-  }
-  */
-
-  /* .top_nav a:hover {
-    background-color: black;
-    color: aliceblue;
-  }
-
-  .top_nav a.active {
-    background-color: aquamarine;
-    color: darkgreen;
-  }  */
