@@ -71,7 +71,7 @@ img {
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    color: cornflowerblue;
+    color: rgb(100, 149, 237);
   }
 
   .content h1 {
@@ -95,7 +95,7 @@ img {
     font-weight: bold;
     border: 2px solid rgb(226, 243, 226);
     background: transparent;
-    color: cornflowerblue;
+    color: rgb(100, 149, 237);
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -119,7 +119,7 @@ img {
   }
 
   button:hover {
-    border: cornflowerblue;
+    border: rgb(100, 149, 237);
   }
 
   /*
