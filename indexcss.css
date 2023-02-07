@@ -12,14 +12,39 @@ img {
 
   .top_nav {
     position:relative;
-    width: 85%;
+    width: 100%;
     margin: auto;
-    padding: 35px 0;
+    padding: 0px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    text-align: right;
+    justify-content: center;
+    text-align: center;
   }
+
+  .top_nav a {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 0px;
+    color: crimson;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-style: hidden;
+    border-radius: 25px;
+  }
+ 
+
+   .top_nav a:hover {
+    background-color: rgb(226, 243, 226);
+    color: darkgreen;
+  }
+
+  .top_nav a.active {
+    background-color: rgb(226, 243, 226);
+    color: darkgreen;
+    transition: none;
+  }  
 
   .top_nav ul li {
     list-style: none;
@@ -34,7 +59,7 @@ img {
     text-transform: uppercase;
   }
 
-  .top_nav ul li::after {
+  .top_nav ul li::after  {
     content: '';
     height: 3px;
     width: 0;
@@ -47,7 +72,6 @@ img {
 
   .top_nav ul li:hover::after {
     width: 100%;
-
   }
 
   .content {
