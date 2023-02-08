@@ -76,7 +76,7 @@
     width: 100%;
     position: absolute;
     top: 50%;
-    transform: translateY(-30%);
+    transform: translateY(-20%);
     text-align: center;
     color: rgb(100, 149, 237);
   }
