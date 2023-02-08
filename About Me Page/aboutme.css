@@ -1,13 +1,10 @@
-img {
+.qr_code img {
     width: 300px;
-    border-radius: 100px;
-    float: left;
-    margin-right: 100px;
+    border-radius: 50px;
+    float: center;
     object-fit: cover;
-  }
-
-  .username {
-    font-weight: bold;
+    overflow: auto;
+    transform: translateY(-7%);
   }
 
   .top_nav {
@@ -19,19 +16,20 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: auto;
   }
 
   .top_nav a {
     list-style-type: none;
     display: inline-block;
     margin: 0 0px;
-    color: crimson;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     border-style: hidden;
     border-radius: 25px;
+    overflow: auto;
   }
  
 
@@ -78,7 +76,7 @@ img {
     width: 100%;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
     text-align: center;
     color: rgb(100, 149, 237);
   }
@@ -108,6 +106,7 @@ img {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    display: inline-block;
   }
 
   span {
@@ -130,6 +129,4 @@ img {
   button:hover {
     border: rgb(100, 149, 237);
   }
-
-  
   
