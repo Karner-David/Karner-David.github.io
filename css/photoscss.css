@@ -1,7 +1,6 @@
-  .my_photos {
+  .my_photos img {
     width: 100px;
     height: 100px;
-    float: left;
     overflow: auto;
     border-top: 5px solid white;
     border-left: 5px solid white;
