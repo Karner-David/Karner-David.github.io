@@ -7,10 +7,6 @@
     border-color: purple;
   }
 
-  .username {
-    font-weight: bold;
-  }
-
   .top_nav {
     position:relative;
     width: 100%;
@@ -75,16 +71,41 @@
     width: 100%;
   }
 
+  section {
+    color: cadetblue;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+  }
+
+  .test {
+    opacity: 0;
+    /* filter: blur(5px);
+    transform: translateX(-100%); */
+    transition: all 1s;
+  }
+
+
+  .show {
+    opacity: 1;
+    /* filter: blur(0); */
+    transform: (0);
+  }
+
   .content {
     width: 100%;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
     text-align: center;
     color: rgb(100, 149, 237);
+    overflow: auto;
   }
 
   .content h1 {
+    position: relative;
+    align-content: center;
     font-size: 70px;
     margin-top: 80px;
     overflow: auto;
