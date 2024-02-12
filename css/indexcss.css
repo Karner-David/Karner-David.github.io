@@ -130,3 +130,18 @@ img {
   button:hover {
     border: rgb(100, 149, 237);
   }
+
+  .countdownButton {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgb(247, 241, 242);
+    background: transparent;
+    color: rgb(251, 11, 103);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
