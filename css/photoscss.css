@@ -1,10 +1,10 @@
   .my_photos img {
     width: 300px;
-    height: 500px;
+    height: 400px;
     overflow: auto;
-    border-style: solid;
-    border: 5px solid pink;
-    border-color: purple;
+    /* border-style: solid; */
+    border: 10px solid rgb(100, 149, 237);
+    /* border-color: pink; */
   }
 
   .top_nav {
