@@ -60,7 +60,7 @@
     content: '';
     height: 3px;
     width: 0;
-    background: #6cc9c0;
+    background: rgb(100, 149, 237);
     position: absolute;
     left: 0;
     bottom: -5px;

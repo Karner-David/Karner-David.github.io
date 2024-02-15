@@ -1,13 +1,17 @@
-img {
+/* img {
     width: 300px;
     border-radius: 100px;
     float: left;
     margin-right: 100px;
     object-fit: cover;
-  }
+  } */
 
-  .username {
+  /* .username {
     font-weight: bold;
+  } */
+
+  body {
+    background-color: white;
   }
 
   .top_nav {
@@ -42,6 +46,7 @@ img {
 
   .top_nav a.active {
     background-color: rgb(226, 243, 226);
+    border: 2px solid rgb(226, 243, 226);
     color: darkgreen;
     transition: none;
   }  
@@ -63,7 +68,7 @@ img {
     content: '';
     height: 3px;
     width: 0;
-    background: #6cc9c0;
+    background: rgb(100, 149, 237);
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -145,3 +150,8 @@ img {
     position: relative;
     overflow: hidden;
   }
+
+  /*  */
+
+
+  
