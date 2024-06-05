@@ -16,18 +16,22 @@
 
   .top_nav {
     position:relative;
+    top: 200px;
     width: 100%;
     margin: auto;
     padding: 0px 0;
     display: flex;
+    /* Each item has a box, align item at top  */
     align-items: center;
-    justify-content: center;
+    /* Justify on screen, left center right, this is left */
+    justify-content: start;
+    /* Justify text just like word doc */
     text-align: center;
   }
 
   .top_nav a {
     list-style-type: none;
-    display: inline-block;
+    display: block;
     margin: 0 0px;
     color: crimson;
     text-align: center;
@@ -38,12 +42,13 @@
     border-radius: 25px;
   }
  
-
+  /* When hovered */
    .top_nav a:hover {
     background-color: rgb(226, 243, 226);
     color: darkgreen;
   }
 
+  /* When selected */
   .top_nav a.active {
     background-color: rgb(226, 243, 226);
     border: 2px solid rgb(226, 243, 226);
@@ -53,7 +58,7 @@
 
   .top_nav ul li {
     list-style: none;
-    display: inline-block;
+    display: block;
     margin: 0 20px;
     position: relative;
   }
@@ -69,7 +74,7 @@
     height: 3px;
     width: 0;
     background: rgb(100, 149, 237);
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: -5px;
     transition: 0.25s;
@@ -81,7 +86,7 @@
 
   .content {
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
