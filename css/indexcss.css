@@ -31,7 +31,7 @@
   }
 
   .top_nav li {
-    display: block; /* Ensures each link is on a new line */
+    display: inline-block; /* Ensures each link is on a new line */
     position: relative;
     margin-bottom: 5px; /* Space between items */
     /* line-height: 1.5; */
@@ -83,9 +83,6 @@
     transition: .3s ease;
     color: rgb(28, 217, 231);
   }
-  
-
- 
 
   .content {
     flex: 1;
