@@ -22,23 +22,56 @@
     flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center items vertically */
     height: 100vh; /* Full height */
-    flex: 0 0 200px; /* Width of the nav, adjust as needed */
+    flex: 0 0 220px; /* Width of the nav, adjust as needed */
     position: relative; /* Positioning context */
   }
 
+  .top_nav ul {
+    list-style-type: none; /* Ensures bullets are shown */
+  }
+
+  .top_nav li {
+    display: block; /* Ensures each link is on a new line */
+    position: relative;
+    margin-bottom: 5px; /* Space between items */
+    /* line-height: 1.5; */
+  }
+
+  .top_nav li::before {
+    content: "■"; /* Custom bullet */
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-70%) rotate(45deg);
+    color: white;
+    transition: transform 0.3s ease;
+  }
+
+  .top_nav li:hover:before {
+    transform: translateY(-70%) rotate(315deg);
+  }
+
   .top_nav a {
-    display: block;
+    display: inline-block;
     text-align: start;
-    /* padding: 10px 16px; */
+    padding: 0px 10px;
     font-size: 50px;
     font-family: 'Tungsten-Bold';
     border-radius: 20px;
   }
 
+  .top_nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    transition: .3s ease;
+  }
+
   /* When selected */
   .top_nav a.active {
-    font-size: 80px;
-    font-weight: 500;
+    font-size: 50px;
+    /* font-weight: 500; */
     /* background-color: rgb(255, 255, 255); */
     /* border: 2px solid rgb(226, 243, 226); */
     color: rgb(223, 69, 69);
@@ -47,28 +80,12 @@
   /* When hovered */
    .top_nav a:hover {
     transform: translateX(10px);
-    transition: .2s ease;
+    transition: .3s ease;
     color: rgb(28, 217, 231);
   }
   
 
-  .top_nav ul {
-    list-style-type: disc; /* Ensures bullets are shown */
-    padding-left: 20px; /* Adjust this value to ensure bullets are visible inside the nav area */
-  }
-
-  .top_nav li {
-    display: block; /* Ensures each link is on a new line */
-    position: relative;
-    margin-bottom: 10px; /* Space between items */
-  }
-
-  .top_nav ul li a {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    position: relative;
-  }
+ 
 
   .content {
     flex: 1;
