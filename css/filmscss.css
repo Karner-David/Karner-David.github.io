@@ -1,80 +1,88 @@
-img {
-    width: 300px;
-    border-radius: 100px;
-    float: left;
-    margin-right: 100px;
-    object-fit: cover;
-  }
+body {
+  display: flex; /* Enable flexbox */
+  min-height: 100vh; /* Minimum height of the viewport */
+  margin: 0; /* Remove default margin */
+  background-image: url("../files/photos/background_image.jpeg");
+  background-size: 100% 150%;
+  background-position: top -150px right 0px;
+  background-repeat: no-repeat;
+  /* background-color: black; */
+}
 
-  .username {
-    font-weight: bold;
-  }
+.top_nav {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  height: 100vh; /* Full height */
+  flex: 0 0 220px; /* Width of the nav, adjust as needed */
+  position: relative; /* Positioning context */
+}
 
-  .top_nav {
-    position:relative;
-    width: 100%;
-    margin: auto;
-    padding: 0px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+.top_nav ul {
+  list-style-type: none; /* Ensures bullets are shown */
+}
 
-  .top_nav a {
-    list-style-type: none;
-    display: inline-block;
-    margin: 0 0px;
-    color: crimson;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    border-style: hidden;
-    border-radius: 25px;
-  }
- 
+.top_nav li {
+  display: inline-block; /* Ensures each link is on a new line */
+  position: relative;
+  margin-bottom: 5px; /* Space between items */
+  /* line-height: 1.5; */
+}
 
-   .top_nav a:hover {
-    background-color: rgb(226, 243, 226);
-    color: darkgreen;
-  }
+.top_nav li::before {
+  content: "■"; /* Custom bullet */
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-70%) rotate(45deg);
+  color: white;
+  transition: transform 0.3s ease;
+}
 
-  .top_nav a.active {
-    background-color: rgb(226, 243, 226);
-    color: darkgreen;
-    transition: none;
-  }  
+.top_nav li:hover:before {
+  transform: translateY(-70%) rotate(315deg);
+}
 
-  .top_nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-  }
+.top_nav a {
+  display: inline-block;
+  text-align: start;
+  padding: 0px 10px;
+  font-size: 50px;
+  font-family: 'Tungsten-Bold';
+  border-radius: 20px;
+}
 
-  .top_nav ul li a {
-    text-decoration: none;
-    color: rgb(88, 149, 114);
-    text-transform: uppercase;
-  }
+@font-face {
+  font-family: 'Tungsten-Bold';
+  src: url(../files/fonts/Tungsten-Bold.ttf);
+}
 
-  .top_nav ul li::after  {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: rgb(100, 149, 237);
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    transition: 0.25s;
-  }
+.top_nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  transition: .3s ease;
+}
 
-  .top_nav ul li:hover::after {
-    width: 100%;
-  }
+/* When selected */
+.top_nav a.active {
+  font-size: 50px;
+  /* font-weight: 500; */
+  /* background-color: rgb(255, 255, 255); */
+  /* border: 2px solid rgb(226, 243, 226); */
+  color: rgb(223, 69, 69);
+}  
 
-  .content {
+/* When hovered */
+ .top_nav a:hover {
+  transform: translateX(10px);
+  transition: .3s ease;
+  color: rgb(28, 217, 231);
+}
+
+
+  /* .content {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -132,4 +140,4 @@ img {
   }
 
   
-  
+   */
