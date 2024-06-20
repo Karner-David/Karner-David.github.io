@@ -8,7 +8,6 @@
   <meta name="description" content="This is Karner's website." />
   <title>My first web page</title>
   <link rel="stylesheet" href="css/photoscss.css" />
-  <script src="photojs.js"></script>
 </head>
 
 <body>
@@ -22,18 +21,27 @@
     </ul>
   </div>
 
-  <!-- <div class="content">
-    <h1>PHOTOS</h1>
+  <div class="content">
+    <h1> PHOTOS </h1>
     <p>These are some photos I've taken! :D <br>----------------------</p>
-    <div class="my_photos">
-      <img src="images/Pretty Tree Coloration.jpg" alt="diverse coloration of tree leaves over some benches">
+    <div class="my_photos" id="photosContainer">
+      <!-- Photos will be displayed here -->
     </div>
-    <div>
-      <button type="button"><span></span>CLICK ME</button>
-      <button type="button"><span></span>ALSO CLICK ME</button>
-    </div>
-
-  </div> -->
+  </div>
+  
+  <div class="image_gallery"></div>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const photoFileNames = [
+      'Pretty Tree Coloration.jpg'
+    ];
+
+    const photosContainer = document.getElementById('photosContainer');
+    photosContainer.innerHTML = photoFilenames.map(filename =>
+      `<img src="http://localhost:5000/photos/${filename}" alt="${filename}">`
+    ).join('');
+  });
+</script>
 
 </html>

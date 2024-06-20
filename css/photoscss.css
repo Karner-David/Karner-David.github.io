@@ -82,6 +82,22 @@
     color: rgb(28, 217, 231);
   }
 
+  /* Media query to set website layout 
+    according to screen size */
+    @media screen and (max-width:600px) {
+
+      body {
+          width: 50%;
+      }
+  }
+
+  @media screen and (max-width:400px) {
+
+      body {
+          width: 100%;
+      }
+  }
+
   /* .content {
     width: 100%;
     position: absolute;
