@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const mainImage = document.getElementById("main_image");
     const thumbnailSlider = document.getElementById("thumbnail_slider");
-    const prevBtn = document.getElementById("prev_btn");
-    const nextBtn = document.getElementById("next_btn");
   
+    // right now we have 12 photos
+    const total_photos = 12;
     const photos = [
       "../photos/asley_under_cherry_blossom_tree.jpeg",
       "../photos/cornell_bridge_sunset.jpeg",
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateMainImage(index) {
       mainImage.src = photos[index];
       Array.from(thumbnailSlider.children).forEach((img, i) => {
-        img.classList.toggle("active", i === index);
+        img.classList.toggle("active", i == index);
       });
     }
   
@@ -32,33 +32,47 @@ document.addEventListener("DOMContentLoaded", function() {
       thumbnailSlider.innerHTML = "";
       for (let i = startIndex; i < startIndex + 11; i++) {
         const img = document.createElement("img");
-        img.src = photos[i];
+        const might_be_negative = i - 5;
+        if (might_be_negative < 0) {
+            img.src = photos[total_photos + might_be_negative];
+        } else if (might_be_negative >= total_photos) {
+            img.src = photos[might_be_negative % total_photos];
+        } else {
+            img.src = photos[might_be_negative];
+        }
         img.addEventListener("click", () => {
-          currentIndex = i;
+          if (might_be_negative < 0) {
+            currentIndex = total_photos + might_be_negative;
+          } else if (might_be_negative >= total_photos) {
+            currentIndex = might_be_negative % total_photos;
+          } else {
+            currentIndex = might_be_negative;
+          }
           updateMainImage(currentIndex);
+          populateThumbnails(currentIndex);
         });
         thumbnailSlider.appendChild(img);
       }
       updateMainImage(currentIndex);
     }
   
-    prevBtn.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        if (currentIndex < photos.length - 6) {
-          populateThumbnails(currentIndex - 5);
-        }
-      }
-    });
+    // prevBtn.addEventListener("click", () => {
+    //   if (currentIndex > 0) {
+    //     currentIndex--;
+    //     if (currentIndex < photos.length - 6) {
+    //       populateThumbnails(currentIndex - 5);
+    //     }
+    //   }
+    // });
   
-    nextBtn.addEventListener("click", () => {
-      if (currentIndex < photos.length - 1) {
-        currentIndex++;
-        if (currentIndex > 5) {
-          populateThumbnails(currentIndex - 5);
-        }
-      }
-    });
+    // nextBtn.addEventListener("click", () => {
+    //   if (currentIndex < photos.length - 1) {
+    //     currentIndex++;
+    //     if (currentIndex > 5) {
+    //       populateThumbnails(currentIndex - 5);
+    //     }
+    //   }
+    // });
   
     populateThumbnails(currentIndex);
   });
