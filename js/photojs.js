@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const mainImage = document.getElementById("main_image");
     const thumbnailSlider = document.getElementById("thumbnail_slider");
   
-    // right now we have 12 photos
-    const total_photos = 12;
+    // right now we have 11 photos
+    const total_photos = 11;
     const photos = [
-      "../photos/asley_under_cherry_blossom_tree.jpeg",
       "../photos/cornell_bridge_sunset.jpeg",
       "../photos/downtown_water_reflection_1.jpeg",
       "../photos/downtown_water_reflection_2.jpeg",
@@ -19,28 +18,68 @@ document.addEventListener("DOMContentLoaded", function() {
       "../photos/university_federal_credit_union.jpeg"
     ];
   
-    let currentIndex = 0;
+    let currentIndex = 4;
+    let numVisibleThumbnails = 11;
+    let thumbnailWidth = 56;
   
     function updateMainImage(index) {
-      mainImage.src = photos[index];
-      Array.from(thumbnailSlider.children).forEach((img, i) => {
-        img.classList.toggle("active", i == index);
+      mainImage.style.opacity = 0;
+      setTimeout(() => {
+        mainImage.src = photos[index];
+        mainImage.style.opacity = 1; // Start fade in effect
+      }, 200);
+
+      const middleIndex = Math.floor(numVisibleThumbnails / 2);
+
+      Array.from(thumbnailSlider.children).forEach((div, i) => {
+        div.classList.toggle("active", i === middleIndex);
       });
+    }
+
+    function applyTransformations(currentIndex, newIndex) {
+      const direction = getDirection(currentIndex, newIndex);
+    //   const direction = (newIndex > currentIndex) ? -1 : 1;
+      const thumbnails = Array.from(thumbnailSlider.children);
+      thumbnails.forEach((div, i) => {
+        div.style.transition = "transform 0.5s ease";
+        div.style.transform = `translateX(${direction * thumbnailWidth}px)`;
+        div.style.opacity = ((direction < 0 && i === 0) || (direction > 0 && i === thumbnails.length - 1)) ? 0 : 0.7; // Make the pushed out thumbnail disappear
+      });
+    }
+
+    function getDirection(currentIndex, newIndex) {
+      // Determine the shortest direction for wrapping
+      const forwardSteps = (newIndex - currentIndex + total_photos) % total_photos;
+      const backwardSteps = (currentIndex - newIndex + total_photos) % total_photos;
+    
+      // Handle edge cases for wrapping
+      if (currentIndex === 0 && newIndex === total_photos - 1) {
+        return 1; // Move backward
+      }
+      if (currentIndex === total_photos - 1 && newIndex === 0) {
+        return -1; // Move forward
+      }
+    return (newIndex > currentIndex) ? -1 : 1;
     }
   
     function populateThumbnails(startIndex) {
       thumbnailSlider.innerHTML = "";
       for (let i = startIndex; i < startIndex + 11; i++) {
-        const img = document.createElement("img");
+        const imgIndex = (startIndex + i + total_photos) % total_photos;
+        const div = document.createElement("div");
+        div.className = "thumbnail";
         const might_be_negative = i - 5;
+
         if (might_be_negative < 0) {
-            img.src = photos[total_photos + might_be_negative];
+            div.style.backgroundImage = `url(${photos[total_photos + might_be_negative]})`;
         } else if (might_be_negative >= total_photos) {
-            img.src = photos[might_be_negative % total_photos];
+            div.style.backgroundImage = `url(${photos[might_be_negative % total_photos]})`;
         } else {
-            img.src = photos[might_be_negative];
+            div.style.backgroundImage = `url(${photos[might_be_negative]})`;
         }
-        img.addEventListener("click", () => {
+
+        div.addEventListener("click", () => {
+          const old_current_index = currentIndex;
           if (might_be_negative < 0) {
             currentIndex = total_photos + might_be_negative;
           } else if (might_be_negative >= total_photos) {
@@ -48,31 +87,20 @@ document.addEventListener("DOMContentLoaded", function() {
           } else {
             currentIndex = might_be_negative;
           }
-          updateMainImage(currentIndex);
-          populateThumbnails(currentIndex);
+          applyTransformations(old_current_index, currentIndex);
+          setTimeout(() => {
+            updateMainImage(currentIndex);
+            populateThumbnails(currentIndex);
+          }, 250);
         });
-        thumbnailSlider.appendChild(img);
+        thumbnailSlider.appendChild(div);
       }
+
       updateMainImage(currentIndex);
     }
-  
-    // prevBtn.addEventListener("click", () => {
-    //   if (currentIndex > 0) {
-    //     currentIndex--;
-    //     if (currentIndex < photos.length - 6) {
-    //       populateThumbnails(currentIndex - 5);
-    //     }
-    //   }
-    // });
-  
-    // nextBtn.addEventListener("click", () => {
-    //   if (currentIndex < photos.length - 1) {
-    //     currentIndex++;
-    //     if (currentIndex > 5) {
-    //       populateThumbnails(currentIndex - 5);
-    //     }
-    //   }
-    // });
+
+    // const slidePosition = -((currentIndex - Math.floor(numVisibleThumbnails / 2)) * 56); // 56px for each thumbnail (50px width + 6px margin)
+    // thumbnailSlider.style.transform = `translateX(${slidePosition}px)`;
   
     populateThumbnails(currentIndex);
   });
