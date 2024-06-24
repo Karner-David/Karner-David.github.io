@@ -84,7 +84,7 @@ body {
 
  .content {
     width: 100%;
-    position: absolute;
+    position: relative;
     text-align: center;
     color: rgb(100, 149, 237);
   }
