@@ -83,6 +83,38 @@
     color: rgb(28, 217, 231);
   }
 
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .content h1 {
+    color: white;
+  }
+
+  #background_info {
+    text-align: left;
+    color: white;
+  }
+
+  .contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust gap as needed */
+    flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+    margin-top: auto;
+  }
+
+  #email {
+    color: white;
+  }
+
+
+
 
   /* .content {
     width: 100%;
@@ -103,7 +135,7 @@
     font-weight: 100;
     font-size: 20px;
     line-height: 25px;
-  }
+  } */
 
   button {
     width: 200px;
@@ -114,13 +146,18 @@
     font-weight: bold;
     border: 2px solid rgb(226, 243, 226);
     background: transparent;
-    color: rgb(100, 149, 237);
+    color: white;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     display: inline-block;
   }
+  button:hover {
+    background: white;
+    color: rgb(223, 69, 69);
+  }
 
+  /*
   span {
     background: rgb(226, 243, 226);
     height: 100%;
