@@ -83,6 +83,60 @@
     color: rgb(28, 217, 231);
   }
 
+  .content {
+    width: 100%;
+    display: inline-block;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+
+  }
+
+  .content h1 {
+    font-size: 75px;
+    color: rgb(223, 69, 69);
+  }
+
+  .content img {
+    margin: auto;
+    transform: translateX(-50px)
+  }
+
+  .content h2 {
+    font-size: 75px;
+    display: inline-block;
+    vertical-align:text-bottom;
+    color: white;
+  }
+
+  .content p {
+    font-size: 25px;
+    display: block;
+    text-align:center;
+  }
+
+  #background_info {
+    text-align: left;
+    transform: translateX(400px);
+    color: white;
+  }
+
+  .contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust gap as needed */
+    flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+    margin-top: auto;
+  }
+
+  #email {
+    color: white;
+  }
+
+
+
 
   /* .content {
     width: 100%;
@@ -103,7 +157,7 @@
     font-weight: 100;
     font-size: 20px;
     line-height: 25px;
-  }
+  } */
 
   button {
     width: 200px;
@@ -112,15 +166,20 @@
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid rgb(226, 243, 226);
+    border: 2px solid rgb(161, 50, 50);
     background: transparent;
-    color: rgb(100, 149, 237);
+    color: white;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     display: inline-block;
   }
+  button:hover {
+    background: white;
+    color: rgb(223, 69, 69);
+  }
 
+  /*
   span {
     background: rgb(226, 243, 226);
     height: 100%;
