@@ -4,7 +4,7 @@
     display: flex; /* Enable flexbox */
     min-height: 100vh; /* Minimum height of the viewport */
     margin: 0; /* Remove default margin */
-    background-color: black;
+    /* background-color: black; */
     background-image: url("../files/photos/background_image.jpeg");
     background-size: 100% 150%;
     background-position: top -150px right 0px;
