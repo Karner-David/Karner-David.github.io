@@ -1,0 +1,12 @@
+.github-icon, 
+.linkedin-icon,
+.gmail-icon {
+  transition: transform 0.5s;
+}
+
+.github-icon:hover, 
+.linkedin-icon:hover,
+.gmail-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}

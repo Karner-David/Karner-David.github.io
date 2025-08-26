@@ -7,3 +7,15 @@ html {
   background-color: #161b29;
 }
 
+@keyframes chips-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-chips-marquee {
+  animation: chips-marquee var(--marquee-speed, 25s) linear infinite;
+}
