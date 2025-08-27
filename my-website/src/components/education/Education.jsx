@@ -1,6 +1,6 @@
 import React from 'react';
 import UTTower from '../../assets/companyicons/Ut-austin-nobg.png';
-import MarqueeChips from "../marqueechips/MarqueeChips";
+import CourseChips from '../CourseChips/CourseChips';
 import './Education.css';
 import '../../App.css';
 
@@ -19,7 +19,7 @@ export default function Education() {
     ];
 
     return(
-        <div className="w-full flex flex-col my-16 items-center education-container">
+        <div className="w-full flex flex-col my-16 overflow-x-hidden items-center education-container">
             <div className="education-title">
                 
             </div>
@@ -38,11 +38,7 @@ export default function Education() {
                     <img className='h-96 animate-[slide-in-right_0.7s_ease-out]' src={UTTower} alt="" />
                 </div>
             </div>
-            <div className="coursework-container">
-                <div className="p-6">
-                  <MarqueeChips items={courses} speed={22} className="rounded-xl border border-gray-200 bg-white/70 backdrop-blur" />
-                </div>
-            </div>
+            <CourseChips courses={courses}></CourseChips>
         </div>
     );
 }
