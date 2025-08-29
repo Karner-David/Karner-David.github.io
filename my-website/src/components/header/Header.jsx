@@ -8,7 +8,7 @@ import '../../App.css';
 
 export default function Header() {
   return (
-    <div className="w-full flex my-10 h-2/5 justify-center header-main-container">
+    <div className="w-full flex py-10 h-2/5 justify-center bg-[#161b29] header-main-container">
       <div className="flex w-1/4 h-full headshot-container">
         <img src={headshot} alt="Headshot" className="animate-[slide-in-left_0.7s_ease-out] headshot-image" />
       </div>
