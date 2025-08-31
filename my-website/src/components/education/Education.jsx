@@ -19,7 +19,7 @@ export default function Education() {
     ];
 
     return(
-        <div className="w-full flex flex-col my-16 overflow-x-hidden items-center education-container">
+        <div className="w-full flex flex-col mb-16 overflow-x-hidden items-center education-container">
             <div className="education-title">
                 
             </div>

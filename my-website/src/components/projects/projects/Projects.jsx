@@ -19,48 +19,22 @@ export default function Projects() {
   return(
     <div className="w-full flex flex-col items-center projects-container">
       <h1 className="flex text-5xl text-white font-[OSBold]">Projects</h1>
-      <div className="my-5 banner">
+      <div className="my-2 banner">
         <div className="slider" style={{ '--quantity': 10, '--paused': (paused) ? 'paused' : 'running'  }}>
           <div className="item" style={{ '--position': 1}}>
-            <img className="" src={Dragon1} alt="" onMouseEnter={() => setPaused(true)}
+            <a href="https://github.com/Karner-David/SWE-Project" target="_blank" rel="noopener noreferrer">  
+                <h1 className="text-sm text-blue-500 underline font-[OSBold]">Papertrail</h1>
+            </a>
+            <img className="" src="/Project-Thumbnails/Papertrail(2).png" alt="" onMouseEnter={() => setPaused(true)}
     onMouseLeave={() => setPaused(false)}/>
+            <div className="w-full proj-description" onMouseEnter={() => setPaused(true)}
+    onMouseLeave={() => setPaused(false)}>
+              
+              <p className="text-white text-[8px]">An Amazon-like marketplace for newspapers and magazines.</p>
+              <p className="text-white text-[8px]">Tech Stack: SQLite, Flask, React, Node.js</p>
+            </div>
           </div>
-          <div className="item" style={{ '--position': 2}}>
-            <img className="" src={Dragon2} alt="" onMouseEnter={() => setPaused(true)}
-    onMouseLeave={() => setPaused(false)}/>
-          </div>
-          <div className="item" style={{ '--position': 3}}>
-            <img className="" src={Dragon3} alt="" onMouseEnter={() => setPaused(true)}
-    onMouseLeave={() => setPaused(false)}/>
-          </div>
-          <div className="item" style={{ '--position': 4}}>
-            <img className="" src={Dragon4} alt="" onMouseEnter={() => setPaused(true)}
-    onMouseLeave={() => setPaused(false)}/>
-          </div>
-          <div className="item" style={{ '--position': 5}}>
-            <img className="" src={Dragon5} alt="" onMouseEnter={() => setPaused(true)}
-    onMouseLeave={() => setPaused(false)}/>
-          </div>
-          <div className="item" style={{ '--position': 6}}>
-            <img className="" src={Dragon6} alt="" onMouseEnter={() => setPaused(true)}
-    onMouseLeave={() => setPaused(false)}/>
-          </div>
-          <div className="item" style={{ '--position': 7}}>
-            <img className="" src={Dragon7} alt="" onMouseEnter={() => setPaused(true)}
-    onMouseLeave={() => setPaused(false)}/>
-          </div>
-          <div className="item" style={{ '--position': 8}}>
-            <img className="" src={Dragon8} alt="" onMouseEnter={() => setPaused(true)}
-    onMouseLeave={() => setPaused(false)}/>
-          </div>
-          <div className="item" style={{ '--position': 9}}>
-            <img className="" src={Dragon9} alt="" onMouseEnter={() => setPaused(true)}
-    onMouseLeave={() => setPaused(false)}/>
-          </div>
-          <div className="item" style={{ '--position': 10}}>
-            <img className="" src={Dragon10} alt="" onMouseEnter={() => setPaused(true)}
-    onMouseLeave={() => setPaused(false)}/>
-          </div>
+          
         </div>
       </div>
     </div>
