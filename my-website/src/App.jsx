@@ -1,6 +1,7 @@
 import Header from './components/header/Header'
 import Education from './components/education/Education'
 import Projects from './components/projects/projects/Projects'
+import DesignProjects from './components/DesignProjects/DesignProjects'
 
 export default function App() {
 
@@ -10,6 +11,7 @@ export default function App() {
       <Header></Header>
       <Education></Education>
       <Projects></Projects>
+      <DesignProjects></DesignProjects>
     </>
   )
 }
