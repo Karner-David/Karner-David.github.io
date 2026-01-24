@@ -1,16 +1,4 @@
 import React, {useState} from "react";
-import BG from '../images/bg.png';
-import Dragon1 from '../images/dragon_1.jpg';
-import Dragon2 from '../images/dragon_2.jpg';
-import Dragon3 from '../images/dragon_3.jpg';
-import Dragon4 from '../images/dragon_4.jpg';
-import Dragon5 from '../images/dragon_5.jpg';
-import Dragon6 from '../images/dragon_6.jpg';
-import Dragon7 from '../images/dragon_7.jpg';
-import Dragon8 from '../images/dragon_8.jpg';
-import Dragon9 from '../images/dragon_9.jpg';
-import Dragon10 from '../images/dragon_10.jpg';
-import Model from '../images/model.png';
 import './Projects.css';
 
 export default function Projects() {
