@@ -6,7 +6,7 @@ export default function Image({ src }) {
     return (
         <>
             <div 
-                className="w-[300px] h-[400px] cursor-pointer hover:scale-105 duration-300" 
+                className="max-w-[300px] max-h-[400px] cursor-pointer hover:scale-105 duration-300" 
                 onClick={() => setIsOpen(true)}
             >
                 <img 
