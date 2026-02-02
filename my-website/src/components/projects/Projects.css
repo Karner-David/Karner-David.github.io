@@ -1,10 +1,10 @@
 .banner {
     width: 100%;
-    height: 70vh;
+    height: 45vh;
+    justify-content: center;
     text-align: center;
     overflow: hidden;
-    position: relative;;
-    /* background-image: url('../images/bg.png'); */
+    position: relative;
     background-color: #161b29;
     background-size: contain;
 }
@@ -30,6 +30,7 @@
 .banner .slider .item {
     overflow: visible;
     position: absolute;
+    height: 50%;
     inset: 0 0 0 0;
     transform: 
         rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
@@ -54,7 +55,6 @@
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
-    /* width: min(1400px, 100vw); */
     height: max-content;
     padding-bottom: 100px;
     display: flex;
@@ -62,16 +62,3 @@
     justify-content: space-between;
     align-items: center;
 }
-
-/* .banner .content .model {
-    background-image: url('../images/model.png');
-    width: 100%;
-    height: 75vh;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-size: auto 130%;
-    background-repeat: no-repeat;
-    background-position: top center;
-
-} */

@@ -19,7 +19,7 @@ export default function DesignProjects() {
 
     return(
         <div className='flex flex-col items-center text-gray-200' style={{fontFamily: 'OSBold'}}>
-            <h1 className='flex text-5xl text-center my-10'> Design Projects </h1>
+            <h1 className='flex text-5xl text-center mb-10'> Design Projects </h1>
             <div className='grid grid-cols-3 mx-20 mb-20 gap-5'>
                 <div className='flex flex-col gap-5'>
                     <Image src={Red} alt="red, brutalism, graphic design"/>
