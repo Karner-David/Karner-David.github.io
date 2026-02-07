@@ -11,6 +11,7 @@ import Car from '/Graphics/carSample.png';
 import Bird from '/Graphics/Bird-Final.png';
 import Building from '/Graphics/Building-Final-True.png';
 import Album from '/Graphics/Album-Final.png';
+import Space from '/Graphics/Space-Final.png';
 import Image from './Image';
 
 import '../../App.css';
@@ -35,6 +36,7 @@ export default function DesignProjects() {
                 </div>
                 <div className='flex flex-col gap-5'>
                     <Image src={Samurai} alt="samurai brutalism graphic design" />
+                    <Image src={Space} alt="space and cybersigilism graphic design"/>
                     <Image src={Building} alt="japanese ancient building graphic design" />
                     <Image src={Zombie} alt="zombie brutalism graphic design" />
                     <Image src={Cyber} alt="cyberpunk styled graphic design" />
